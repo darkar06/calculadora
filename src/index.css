@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "bold";
+  src: url("./assets/Gotham-Bold.otf");
+}
+
+@font-face {
+  font-family: "medium";
+  src: url("./assets/GothamMedium.ttf");
+}
+
+@font-face {
+  font-family: "light";
+  src: url("./assets/GothamLight.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blanco1: #ececec;
+  --blanco2: #bdbdbd;
+  --negro1: #1f1f1f;
+  --negro2: #2e2e2e;
+
+
+  --main-color: #2a87b6;
+  --second-color: #0b3f55;
+
+  --rojo: #d62525;
+}
+
+h1 {
+  font-family: bold;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: bold;
+  font-size: 24px;
+}
+
+h6,
+a {
+  font-family: medium;
+  font-size: 16px;
+}

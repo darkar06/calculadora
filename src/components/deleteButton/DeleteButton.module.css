@@ -1,0 +1,9 @@
+.button {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  background-color: var(--rojo);
+  border-radius: 8px;
+  color: var(--blanco1);
+}
