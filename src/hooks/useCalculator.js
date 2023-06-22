@@ -73,7 +73,8 @@ export default function useCalculator() {
     }
 
 
-    if (resultado == "Infinity" && resultado == "-Infinity") {
+    if (resultado == Infinity || resultado == -Infinity) {
+      console.log("a")
       setCalculator({
         prevOperation: calculator.result,
         result: resultado.toString(),
