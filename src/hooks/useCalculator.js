@@ -54,6 +54,7 @@ export default function useCalculator() {
     let segundoResultado = parseFloat(calculator.secondValue)
     let resultado = null
 
+    if (isNaN(primerResultado)) primerResultado = 0
     if (isNaN(segundoResultado)) segundoResultado = 0
 
 
