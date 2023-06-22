@@ -50,9 +50,11 @@ export default function useCalculator() {
 
   const getResult = () => {
 
-    const primerResultado = parseFloat(calculator.firstValue)
-    const segundoResultado = parseFloat(calculator.secondValue)
+    let primerResultado = parseFloat(calculator.firstValue)
+    let segundoResultado = parseFloat(calculator.secondValue)
     let resultado = null
+
+    if (isNaN(segundoResultado)) segundoResultado = 0
 
 
     switch (calculator.operation) {
@@ -67,6 +69,18 @@ export default function useCalculator() {
       case "%": resultado = primerResultado / segundoResultado
         break
       default: resultado = primerResultado + segundoResultado
+    }
+
+
+    if (resultado == "Infinity") {
+      setCalculator({
+        prevOperation: calculator.result,
+        result: resultado.toString(),
+        firstValue: "",
+        secondValue: "",
+        operation: null
+      })
+      return null
     }
 
     setCalculator({
